@@ -1,0 +1,6 @@
+{
+  "name": "CricPro Android - Cricket Scoring & Stats",
+  "description": "Professional cricket scoring, tournament management, and automated real-time player statistics optimized for Android phones and tablets with an ESPNcricinfo-inspired dark theme.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

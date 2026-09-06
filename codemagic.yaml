@@ -21,6 +21,11 @@ workflows:
         script: |
           npx cap sync ios
 
+      - name: Install CocoaPods
+        script: |
+          cd ios/App
+          pod install
+
       - name: Build iOS
         script: |
           cd ios/App
@@ -29,7 +34,7 @@ workflows:
             -scheme App \
             -configuration Release \
             -sdk iphoneos \
-            -archivePath $CM_BUILD_DIR/CricketScorer.xcarchive \
+            -archivePath "$CM_BUILD_DIR/CricketScorer.xcarchive" \
             archive
 
     artifacts:

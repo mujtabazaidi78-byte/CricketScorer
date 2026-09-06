@@ -6,7 +6,6 @@ workflows:
     environment:
       node: 22
       xcode: latest
-      cocoapods: default
 
     scripts:
       - name: Install dependencies
@@ -21,16 +20,11 @@ workflows:
         script: |
           npx cap sync ios
 
-      - name: Install CocoaPods
-        script: |
-          cd ios/App
-          pod install
-
       - name: Build iOS
         script: |
           cd ios/App
           xcodebuild \
-            -workspace App.xcworkspace \
+            -project App.xcodeproj \
             -scheme App \
             -configuration Release \
             -sdk iphoneos \
